@@ -1258,7 +1258,7 @@
             </div>
 
             <div class="projects-grid">
-                <div class="project-card">
+                <a href="https://github.com/prasad-vichare" target="_blank" class="project-card">
                     <div class="project-header">
                         <div class="project-icon">🏢</div>
                         <h3>Cloud Data Warehouse & Analytics</h3>
@@ -1279,9 +1279,9 @@
                             <span class="tech-badge">Star Schema</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="project-card">
+                <a href="https://github.com/prasad-vichare" target="_blank" class="project-card">
                     <div class="project-header">
                         <div class="project-icon">🚨</div>
                         <h3>Anti-Spam SMSC Solution</h3>
@@ -1302,9 +1302,9 @@
                             <span class="tech-badge">Power BI</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="project-card">
+                <a href="https://github.com/prasad-vichare" target="_blank" class="project-card">
                     <div class="project-header">
                         <div class="project-icon">🏥</div>
                         <h3>Healthcare Analytics Platform</h3>
@@ -1325,7 +1325,7 @@
                             <span class="tech-badge">DAX</span>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -1524,58 +1524,16 @@
 
         // Download Resume Function
         function downloadResume() {
-            // Create resume content
-            const resumeContent = `PRASAD VICHARE
-Chicago, IL | https://www.linkedin.com/in/prasad-vichare/ | +1 312-459-8976 | pvich@uic.edu
-
-SUMMARY
-Data Engineer with over 6 years of experience designing scalable ETL pipelines and cloud data warehouses on Azure and Snowflake. Proven expertise in SQL, Python, Spark, and Microsoft Fabric to deliver ML-integrated analytics and business intelligence solutions that drive operational efficiency.
-
-EDUCATION
-University of Illinois Chicago - M.S. in Management Information Systems (Expected: May 2026)
-University of Mumbai - Bachelor of Engineering in Electronics and Telecommunication (2014 - 2018)
-
-WORK EXPERIENCE
-
-UI Health – Department of Cardiology (December 2024 – Present) | Chicago, IL
-Technical Analyst
-• Accelerated enterprise-wide reporting by 35% by orchestrating pipelines from EPIC healthcare data into Microsoft Azure Data Lake
-• Built interactive Power BI dashboards providing real-time insights into provider performance and work RVUs
-
-Reliance Jio Infocom Pvt. Ltd (September 2020 - July 2024) | Mumbai, India
-Deputy Manager | Data Engineer
-• Mitigated spam-related traffic by 30% by directing nationwide rollout of 'Anti-Spam SMSC' solution
-• Engineered production-grade ETL pipelines processing 10M+ daily records
-• Improved Spam detection accuracy by 22% using Python and Scikit-learn
-• Reduced manual deployment errors by 90% through CI/CD pipeline implementation
-
-Quess Corporation (January 2019 – September 2020) | Mumbai, India
-Data Analyst
-• Streamlined analytics for 50K+ daily records with automated ETL pipelines
-• Architected Snowflake warehouse using Medallion architecture
-• Delivered Tableau dashboards with interactive KPIs and drill-down insights
-
-SKILLS
-Data Engineering: Microsoft Fabric, Azure, Snowflake, Spark, ETL/ELT, Data Modeling, SQL Server, MySQL
-Programming: Python (Pandas, NumPy, PySpark), SQL, R, Shell Scripting, Java
-Analytics: Power BI (DAX, Semantic Modelling), Tableau, Excel
-Machine Learning: Scikit-learn, Predictive Analysis, LLM
-Project Management: Agile, SDLC, Stakeholder Management, Jira
-
-CERTIFICATIONS
-• AWS Academy Data Engineering
-• AWS Academy Cloud Foundations
-• Google Data Analytics`;
-
-            // Create and download file
-            const blob = new Blob([resumeContent], { type: 'text/plain' });
-            const url = window.URL.createObjectURL(blob);
+            // Path to your resume PDF file
+            // This should be in the same folder as your index.html
+            const resumePath = 'Prasad_Vichare_Resume.pdf';
+            
+            // Create a link and trigger download
             const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Prasad_Vichare_Resume.txt';
+            a.href = resumePath;
+            a.download = 'Prasad_Vichare_Resume.pdf';
             document.body.appendChild(a);
             a.click();
-            window.URL.revokeObjectURL(url);
             document.body.removeChild(a);
             
             // Show success message
